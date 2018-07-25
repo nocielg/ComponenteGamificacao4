@@ -18,7 +18,7 @@ public class Armazenamento {
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>(); 
 	
 	private String lerArquivo(String arquivo) throws IOException{
-		FileReader fileReader = new FileReader("/home/gleisson/workspace/ComponenteGameficacao/arquivo.txt");
+		FileReader fileReader = new FileReader("/home/gleisson/eclipse-workspace/ComponenteGameficacao4/arquivo.txt");
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		String textoLido;
 		textoLido = bufferedReader.readLine();
@@ -81,12 +81,13 @@ public class Armazenamento {
 		for (String n:nomes){
 			pw.printf(usuario.getNomeUsuario(),n,usuario.getPontos(n));
 			
+			
 		}
 		
 	}
 	
 	public void escrevendoNoArquivo() throws IOException{
-		PrintWriter printWriter = new PrintWriter("/home/gleisson/workspace/ComponenteGameficacao/arquivo.txt");
+		PrintWriter printWriter = new PrintWriter("/home/gleisson/eclipse-workspace/ComponenteGameficacao4/arquivo.txt");
 		for(Usuario u: this.usuario){
 			retornaUsuarioPorTipoDePontoRecebido(printWriter, u);
 		}

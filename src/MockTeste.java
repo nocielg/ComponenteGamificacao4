@@ -8,15 +8,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-public class MockPlacar implements Placar{
+public class MockTeste implements InterfacePlacar{
 
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>();
 
 	Armazenamento armazenamento = new Armazenamento();
-		
+
 	public void carregandoUsuariosArmazenados(){
 		usuario = (ArrayList) armazenamento.usuario.clone();
 	}
+	
 	@Override
 	public void registraTipoDePonto(String nomeUsuario, int ponto, String tipoDePonto) {
 		armazenamento.adicionandoPonto(nomeUsuario, ponto, tipoDePonto);
@@ -45,8 +46,9 @@ public class MockPlacar implements Placar{
 					tipoDePontosUsuarios = new String[tiposDePontosSplit.length];
 					for(String string: tiposDePontosSplit){
 						tipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+string+u.getPontos(string); 
+						contador=contador+1;
 					}
-					contador=contador+1;
+					//contador estava aqui, anteriormente
 				}
 				
 			}
@@ -69,8 +71,9 @@ public class MockPlacar implements Placar{
 					rankingTipoDePontosUsuarios = new String[tiposDePontosSplit.length];
 					for(String string: tiposDePontosSplit){
 						rankingTipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+u.getPontos(tipoDePonto); 
+						contador=contador+1;
 					}
-					contador=contador+1;
+					// contador estava aqui, anteriormente
 				}
 				
 				
