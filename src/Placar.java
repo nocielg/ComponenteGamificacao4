@@ -2,15 +2,18 @@ import java.util.Arrays;
 
 public class Placar implements InterfacePlacar{
 	private Armazenamento _armazenamento;
+	//private ArmazenamentoMock _armazenamentoMock;
 	
 	public Placar (Armazenamento _armazenamento) {
 		this._armazenamento = _armazenamento;
 	}
 	
+	public Placar(ArmazenamentoMock armazenamentoMock) {
+		this._armazenamento = armazenamentoMock;
+	}
+
 	@Override
 	public void registraTipoDePonto(String usuario, int ponto, String tipoDePonto) {
-		//a quem delega a recuperação e o armazenamento das informações
-		
 		_armazenamento.adicionandoPonto(usuario, ponto, tipoDePonto);
 	}
 	
@@ -29,9 +32,9 @@ public class Placar implements InterfacePlacar{
 					tipoDePontosUsuarios = new String[tiposDePontosSplit.length];
 					for(String string: tiposDePontosSplit){
 						tipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+string+u.getPontos(string); 
-						contador=contador+1;
+						
 					}
-					//contador estava aqui, anteriormente
+					contador=contador+1;
 				}
 				
 			}
@@ -47,16 +50,16 @@ public class Placar implements InterfacePlacar{
 		String[] rankingTipoDePontosUsuarios = null;
 		int contador = 0;
 				
-			for(Usuario u: this._armazenamento.usuario) { //usuario){
+			for(Usuario u: this._armazenamento.usuario) { 
 				if ((u.getTipos()) == tipoDePonto){
 					tiposDePontos = u.getTipos();
 					tiposDePontosSplit = tiposDePontos.split(";");
 					rankingTipoDePontosUsuarios = new String[tiposDePontosSplit.length];
 					for(String string: tiposDePontosSplit){
 						rankingTipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+u.getPontos(tipoDePonto); 
-						contador=contador+1;
+						
 					}
-					// contador estava aqui, anteriormente
+					contador=contador+1;
 				}
 				
 				
@@ -64,6 +67,7 @@ public class Placar implements InterfacePlacar{
 				
 			}
 		Arrays.sort(rankingTipoDePontosUsuarios); 
+		
 		
 		return rankingTipoDePontosUsuarios;
 		

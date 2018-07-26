@@ -13,7 +13,7 @@ import java.util.Scanner;
 import org.junit.Before;
 
 
-public class Armazenamento {
+public class Armazenamento implements InterfaceArmazenamento{
 	
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>(); 
 	
