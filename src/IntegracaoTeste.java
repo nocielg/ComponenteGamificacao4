@@ -21,7 +21,7 @@ public class IntegracaoTeste {
 	
 	@After
 	public void limparArquivo() throws IOException{
-		File _file = new File(_pathFile);
+		File _file = new File(this._pathFile);
 		_file.delete();
 	}
 }
