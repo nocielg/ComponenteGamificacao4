@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.TreeMap;
+
+import com.sun.javafx.collections.MappingChange.Map;
 
 public class Placar implements InterfacePlacar{
 	private Armazenamento _armazenamento;
@@ -42,12 +45,13 @@ public class Placar implements InterfacePlacar{
 		return tipoDePontosUsuarios;
 		
 	}
-	
+	/*
 	@Override
 	public String[] retornaRankingPorTipoDePonto (String tipoDePonto) {
 		String tiposDePontos;
 		String[] tiposDePontosSplit;
 		String[] rankingTipoDePontosUsuarios = null;
+		
 		int contador = 0;
 				
 			for(Usuario u: this._armazenamento.usuario) { 
@@ -59,7 +63,7 @@ public class Placar implements InterfacePlacar{
 						rankingTipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+u.getPontos(tipoDePonto); 
 						
 					}
-					contador=contador+1;
+					contador=contador+1; 
 				}
 				
 				
@@ -67,7 +71,27 @@ public class Placar implements InterfacePlacar{
 				
 			}
 		Arrays.sort(rankingTipoDePontosUsuarios); 
+				
 		
+		return rankingTipoDePontosUsuarios; 
+			
+				
+	}*/
+	
+	@Override
+	public String retornaRankingPorTipoDePonto (String tipoDePonto) {
+		//A treeMap é como se fosse uma hash table no entanto os seus valores já vem ordenados
+		TreeMap<Integer,String> tiposOrdenados = new TreeMap<Integer,String>();
+		String rankingTipoDePontosUsuarios = null;
+		
+		for(Usuario u: this._armazenamento.usuario) { 
+			
+			if (u.getPontos(tipoDePonto)!=0) {
+				tiposOrdenados.put(u.getPontos(tipoDePonto),u.getNomeUsuario());
+			}
+		}
+		
+		rankingTipoDePontosUsuarios = tiposOrdenados.toString();
 		
 		return rankingTipoDePontosUsuarios;
 		
