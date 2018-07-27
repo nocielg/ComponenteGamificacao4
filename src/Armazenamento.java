@@ -16,6 +16,15 @@ import org.junit.Before;
 public class Armazenamento implements InterfaceArmazenamento{
 	
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>(); 
+	IFileHelper _fileHelper;
+	
+	public Armazenamento(IFileHelper _fileHelper2) {
+		this._fileHelper = _fileHelper;
+	}
+	
+	public Armazenamento() {
+		
+	}
 	
 	private String lerArquivo(String arquivo) throws IOException{
 		FileReader fileReader = new FileReader("/home/gleisson/eclipse-workspace/ComponenteGameficacao4/arquivo.txt");
@@ -94,4 +103,5 @@ public class Armazenamento implements InterfaceArmazenamento{
 		printWriter.close();
 		
 	}
+	
 }

@@ -38,10 +38,7 @@ public class PlacarTeste {
 	
 	@Test
 	public void testaRetornaRankingPorTipoDePonto() {
-		//assertEquals(Arrays.toString(placar.retornaRankingPorTipoDePonto("Topico")),"Joao;Carlos;");
-		//assertEquals(placar.retornaRankingPorTipoDePonto("Topico"),"Joao;Carlos;");
 		assertEquals(placar.retornaRankingPorTipoDePonto("Topico"),"{15=Carlos, 30=Joao}");
-		
 	}
 	
 	/*
