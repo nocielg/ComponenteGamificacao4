@@ -18,16 +18,19 @@ public class Armazenamento implements InterfaceArmazenamento{
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>(); 
 	IFileHelper _fileHelper;
 	
-	public Armazenamento(IFileHelper _fileHelper2) {
+	public Armazenamento(IFileHelper _fileHelper) {
 		this._fileHelper = _fileHelper;
+		this._fileHelper = new IFileHelper("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 	}
 	
 	public Armazenamento() {
 		
 	}
 	
+	// talvez não seja necessário...
+	//olhar
 	private String lerArquivo(String arquivo) throws IOException{
-		FileReader fileReader = new FileReader("/home/gleisson/eclipse-workspace/ComponenteGameficacao4/arquivo.txt");
+		FileReader fileReader = new FileReader("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		String textoLido;
 		textoLido = bufferedReader.readLine();
@@ -76,6 +79,8 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
+	// talvez não seja necessário...
+	//olhar
 	private void imprimeUsuariosSeparadamente(PrintWriter pw){
 		String string = retornaUsuariosQueReceberamPontos();
 		String[] nomes = string.split(";");
@@ -84,6 +89,8 @@ public class Armazenamento implements InterfaceArmazenamento{
 		}
 	}
 	
+	// talvez não seja necessário...
+	//olhar
 	public void retornaUsuarioPorTipoDePontoRecebido(PrintWriter pw, Usuario usuario){
 		String string = usuario.getTipos();
 		String[] nomes = string.split(";");
@@ -95,8 +102,10 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
+	// talvez não seja necessário...
+		//olhar
 	public void escrevendoNoArquivo() throws IOException{
-		PrintWriter printWriter = new PrintWriter("/home/gleisson/eclipse-workspace/ComponenteGameficacao4/arquivo.txt");
+		PrintWriter printWriter = new PrintWriter("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 		for(Usuario u: this.usuario){
 			retornaUsuarioPorTipoDePontoRecebido(printWriter, u);
 		}

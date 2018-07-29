@@ -22,7 +22,7 @@ public class Placar implements InterfacePlacar{
 	
 	@Override
 	public String[] retornaTodosPontosDeUmUsuario(String usuario) {
-		//mexer aqui
+		
 		String tiposDePontos;
 		String[] tiposDePontosSplit;
 		String[] tipoDePontosUsuarios = null;
