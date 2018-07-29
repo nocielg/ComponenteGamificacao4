@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
-
+//
 public class PlacarTeste {
 	Armazenamento _armazenamento;
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>();

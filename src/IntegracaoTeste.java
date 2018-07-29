@@ -7,7 +7,7 @@ import java.util.Formatter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+//
 public class IntegracaoTeste {
 	private String _pathFile = "/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt";
 	private Placar _placar;

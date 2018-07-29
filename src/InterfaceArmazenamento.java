@@ -1,6 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-
+//
 public interface InterfaceArmazenamento {
 	public void adicionaUsuario(Usuario usuario);
 	public void adicionandoPonto(String usuario, int ponto, String tipoDePonto);

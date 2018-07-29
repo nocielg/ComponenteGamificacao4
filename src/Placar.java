@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.TreeMap;
 
 import com.sun.javafx.collections.MappingChange.Map;
-
+//
 public class Placar implements InterfacePlacar{
 	private Armazenamento _armazenamento;
 	//private ArmazenamentoMock _armazenamentoMock;

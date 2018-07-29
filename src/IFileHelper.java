@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Formatter;
-
+//
 public class IFileHelper {
 	private String _pathFile = "";
 	Armazenamento _armazenamento;
