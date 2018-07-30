@@ -5,7 +5,7 @@ import com.sun.javafx.collections.MappingChange.Map;
 //
 public class Placar implements InterfacePlacar{
 	private Armazenamento _armazenamento;
-	//private ArmazenamentoMock _armazenamentoMock;
+	
 		
 	public Placar (Armazenamento _armazenamento) {
 		this._armazenamento = _armazenamento;
@@ -45,39 +45,7 @@ public class Placar implements InterfacePlacar{
 		return tipoDePontosUsuarios;
 		
 	}
-	/*
-	@Override
-	public String[] retornaRankingPorTipoDePonto (String tipoDePonto) {
-		String tiposDePontos;
-		String[] tiposDePontosSplit;
-		String[] rankingTipoDePontosUsuarios = null;
 		
-		int contador = 0;
-				
-			for(Usuario u: this._armazenamento.usuario) { 
-				if ((u.getTipos()) == tipoDePonto){
-					tiposDePontos = u.getTipos();
-					tiposDePontosSplit = tiposDePontos.split(";");
-					rankingTipoDePontosUsuarios = new String[tiposDePontosSplit.length];
-					for(String string: tiposDePontosSplit){
-						rankingTipoDePontosUsuarios[contador] = u.getNomeUsuario()+";"+u.getPontos(tipoDePonto); 
-						
-					}
-					contador=contador+1; 
-				}
-				
-				
-				
-				
-			}
-		Arrays.sort(rankingTipoDePontosUsuarios); 
-				
-		
-		return rankingTipoDePontosUsuarios; 
-			
-				
-	}*/
-	
 	@Override
 	public String retornaRankingPorTipoDePonto (String tipoDePonto) {
 		//A treeMap é como se fosse uma hash table no entanto os seus valores já vem ordenados

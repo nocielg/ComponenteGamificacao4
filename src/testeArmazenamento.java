@@ -62,7 +62,7 @@ public class testeArmazenamento {
 		armazenamento.adicionandoPonto("Joao", 5, "Estrela");
 		armazenamento.adicionandoPonto("Joao", 30, "Comentario");
 		armazenamento.adicionandoPonto("Joao", 50, "Topico");
-		assertEquals(armazenamento.tiposDePontosRegistradosPorUsuario("Joao"),"Estrela;Comentario;Topico;");
+		assertEquals(armazenamento.tiposDePontosRegistradosPorUsuario("Joao"),"Topico;Estrela;Comentario;");
 	}
 	
 	@Test

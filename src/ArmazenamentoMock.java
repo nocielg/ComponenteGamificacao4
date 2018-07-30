@@ -2,15 +2,6 @@ import java.util.ArrayList;
 //
 public class ArmazenamentoMock extends Armazenamento implements InterfaceArmazenamento{
 	
-	/*
-	Armazenamento _armazenamento;
-	ArrayList <Usuario> usuario = new ArrayList<Usuario>();
-	
-	public void carregandoUsuariosArmazanados() {
-		usuario = (ArrayList) _armazenamento.usuario.clone();
-	}
-	*/
-		
 	public void armazenandoUsuarios() {
 		adicionaUsuario(new Usuario("Joao"));
 		adicionaUsuario(new Usuario("Maria"));

@@ -10,11 +10,7 @@ public class PlacarTeste {
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>();
 	Placar placar;
 	ArmazenamentoMock armazenamentoMock;
-	
-	/*public void carregandoUsuariosArmazenados(){
-		usuario = (ArrayList) _armazenamento.usuario.clone();
-	}*/
-	
+		
 	@Before
 	public void inicializanoTeste(){
 		armazenamentoMock = new ArmazenamentoMock();
@@ -41,29 +37,4 @@ public class PlacarTeste {
 		assertEquals(placar.retornaRankingPorTipoDePonto("Topico"),"{15=Carlos, 30=Joao}");
 	}
 	
-	/*
-	public void testarRegistroDePontos(){
-		Usuario usuario_vanessa = retornaUsuario("Vanessa");
-		//Usuario usuario_maria = retornaUsuario("Maria");
-		//Usuario usuario_carlos = retornaUsuario("Carlos");
-		assertEquals(usuario_joao.getPontos("Estrela"),5);
-		assertEquals(usuario_maria.getPontos("Comentario"),20);
-		assertEquals(usuario_carlos.getPontos("Topico"),15);
-	}
-	
-	@Test
-	public void testaRetornaTodosPontosDeUmUsuario(){
-		
-		assertEquals(Arrays.toString(retornaTodosPontosDeUmUsuario("Maria")),"[Maria;Comentario20]");
-		
-	}
-	
-	
-	@Test
-	public void retornaRankingPorTipoDePonto(){
-		
-		assertEquals(Arrays.toString(retornaRankingPorTipoDePonto("Topico")),"Joao;Carlos;");
-	}
-	*/
-
 }

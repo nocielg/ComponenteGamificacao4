@@ -20,11 +20,7 @@ public class IFileHelper {
 	public IFileHelper(String pathFile){
 		this._pathFile = pathFile;
 	}
-	/*
-	public IFileHelper(File file){
-		this._file = file;
-	}*/
-
+	
 	protected String lerArquivo(String arquivo) throws IOException{
 		FileReader fileReader = new FileReader(this._pathFile);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -84,57 +80,7 @@ public class IFileHelper {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-			/*try {
-				Formatter saida = new Formatter(this._pathFile);
-				saida.format("\n", _armazenamento.usuario,stringSalvaNoArquivo);
-				saida.close();
-				System.out.println("Arquivo salvo com sucesso");
-			}
-		
-			catch (Exception erro){
-				System.out.println("O arquivo não pode ser gerado");
-			}*/ 
-		/*
-		try {
-			FileWriter writer = new FileWriter(new File(this._pathFile));  
-			PrintWriter saida = new PrintWriter(writer);
-			saida.println(stringSalvaNoArquivo);
-			saida.close();  
-			writer.close();
-			System.out.println("Arquivo criado com sucesso!");
-		} catch (Exception e) {
-			e.printStackTrace();
-		} */
-		/*
-		boolean fileOpened = true;
-
-		try {
-		    toFile = new PrintWriter(this._pathFile);;
-		} // end try
-
-		catch (FileNotFoundException e) {
-		       fileOpened = false;      
-		    // Error Message saying file could not be opened        
-		} // end catch
-
-		if(fileOpened){
-		    toFile.println(stringSalvaNoArquivo);
-		    toFile.close();
-		} // end if*/
-
-		
-		
-		
-		/*PrintWriter printWriter = new PrintWriter(this._pathFile);
-		for(Usuario u: this._armazenamento.usuario){
-			_armazenamento.retornaUsuarioPorTipoDePontoRecebido(printWriter, u);
-		}
-		printWriter.close();*/
-		
-		/*
-		  https://pt.stackoverflow.com/questions/134221/como-gravar-um-arquivo-txt-com-o-nome-de-cada-paciente
-		*/
-		
+	
 	}
 
 }

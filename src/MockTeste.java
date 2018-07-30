@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-//
+//não vai ser enviada
 
 public class MockTeste implements InterfacePlacar{
 
