@@ -17,11 +17,11 @@ public class Armazenamento implements InterfaceArmazenamento{
 	
 	ArrayList <Usuario> usuario = new ArrayList<Usuario>(); 
 	IFileHelper _fileHelper;
-	
+	/*
 	public Armazenamento(IFileHelper _fileHelper) {
 		this._fileHelper = _fileHelper;
 		this._fileHelper = new IFileHelper("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
-	}
+	}*/
 	
 	public Armazenamento() {
 		

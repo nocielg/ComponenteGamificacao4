@@ -6,7 +6,7 @@ import com.sun.javafx.collections.MappingChange.Map;
 public class Placar implements InterfacePlacar{
 	private Armazenamento _armazenamento;
 	//private ArmazenamentoMock _armazenamentoMock;
-	
+		
 	public Placar (Armazenamento _armazenamento) {
 		this._armazenamento = _armazenamento;
 	}
@@ -41,7 +41,7 @@ public class Placar implements InterfacePlacar{
 				}
 				
 			}
-		
+			 
 		return tipoDePontosUsuarios;
 		
 	}
