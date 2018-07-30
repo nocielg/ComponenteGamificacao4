@@ -89,7 +89,7 @@ public class Armazenamento implements InterfaceArmazenamento{
 		}
 	}*/
 	
-	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar
+	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar e com a IFileHelper.
 	public void retornaUsuarioPorTipoDePontoRecebido(PrintWriter pw, Usuario usuario){
 		String string = usuario.getTipos();
 		String[] nomes = string.split(";");
@@ -101,7 +101,7 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
-	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar
+	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar e com a IFileHelper.
 	public void escrevendoNoArquivo() throws IOException{
 		PrintWriter printWriter = new PrintWriter("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 		for(Usuario u: this.usuario){
