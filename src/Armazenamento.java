@@ -27,8 +27,8 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
-	// talvez não seja necessário...
-	//olhar
+	//método não utilizado
+	/*
 	private String lerArquivo(String arquivo) throws IOException{
 		FileReader fileReader = new FileReader("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -38,7 +38,7 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 		return textoLido;
 		
-	}
+	}*/
 	
 	public void adicionaUsuario(Usuario usuario){
 		this.usuario.add(usuario);
@@ -79,18 +79,17 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
-	// talvez não seja necessário...
-	//olhar
+	// método não utilizado
+	/*
 	private void imprimeUsuariosSeparadamente(PrintWriter pw){
 		String string = retornaUsuariosQueReceberamPontos();
 		String[] nomes = string.split(";");
 		for (String n:nomes){
 			pw.println("-" + n);
 		}
-	}
+	}*/
 	
-	// talvez não seja necessário...
-	//olhar
+	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar
 	public void retornaUsuarioPorTipoDePontoRecebido(PrintWriter pw, Usuario usuario){
 		String string = usuario.getTipos();
 		String[] nomes = string.split(";");
@@ -102,8 +101,7 @@ public class Armazenamento implements InterfaceArmazenamento{
 		
 	}
 	
-	// talvez não seja necessário...
-		//olhar
+	//método usado para testar o armazenamento direto no arquivo, antes da integração com a classe Placar
 	public void escrevendoNoArquivo() throws IOException{
 		PrintWriter printWriter = new PrintWriter("/home/gleisson/eclipse-workspace/ComponenteGamificacao4/arquivo.txt");
 		for(Usuario u: this.usuario){
